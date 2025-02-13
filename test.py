@@ -69,15 +69,15 @@ class Main: #{
         drivetrain.drive_for(FORWARD, 1000, MM)#; // Drives down the hallway and stops in front of Pharmacy
         wait(.5, SECONDS)#; //TODO: Change the above code to not overrun. 
         drivetrain.turn_for(RIGHT, 100, DEGREES)#; // Turns right 90º to face the Pharmacy.
-        drivetrain.drive_for(FORWARD, 500, MM)#; // Drives into the Pharmacy.
+        drivetrain.drive_for(FORWARD, .5 * 1000, MM)#; // Drives into the Pharmacy.
         wait(5, SECONDS)#; // Waits 5 seconds to pick up the medication. 
         drivetrain.drive_for(REVERSE, 550, MM)#; // Reverses out of the Pharmacy. 
         # exit(129)
         wait(.5, SECONDS)#;
         drivetrain.turn_for(RIGHT, 100, DEGREES)#; // Drives up the hallway and stops in front of the Room 1. 
-        drivetrain.drive_for(FORWARD, 500 , MM)#; // Enters Room 1. 
+        drivetrain.drive_for(FORWARD, .5 * 1000 , MM)#; // Enters Room 1. 
         drivetrain.turn_for(LEFT, 100, DEGREES)#; // What the fuck
-        drivetrain.drive_for(FORWARD,500, MM)#; // Enters Room 1.
+        drivetrain.drive_for(FORWARD, 500, MM)#; // Enters Room 1.
         wait(3, SECONDS)#; // Waits 3 seconds to deliver medicine. 
         drivetrain.drive_for(REVERSE, .55 * 1000, MM)#; // Reverses out of Room 1. 
         wait(.5, SECONDS)#;
