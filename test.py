@@ -60,21 +60,22 @@ class Main: #{
     @staticmethod
     def main(args: list) -> None: #{
         NINETY_DEGREES: int = 125#;
-        drivetrain.set_drive_velocity(23, PERCENT)#;
-        drivetrain.drive_for(FORWARD, .75 * 1000, MM)#; 
+        drivetrain.set_drive_velocity(23, PERCENT)
+        drivetrain.set_turn_velocity(55, PERCENT)
+        drivetrain.drive_for(FORWARD, 775 , MM)#; 
         #// Drives forward for .75m from the start locaion to the center of the hallway; converted into mm by multiplying with 1000.
         wait(.5, SECONDS)#;
         drivetrain.turn_for(LEFT, 125, DEGREES)#; // Turns left 90º to drive down the hallway.
-        drivetrain.drive_for(FORWARD, 975, MM)#; // Drives down the hallway and stops in front of Pharmacy
+        drivetrain.drive_for(FORWARD, 1000, MM)#; // Drives down the hallway and stops in front of Pharmacy
         wait(.5, SECONDS)#; //TODO: Change the above code to not overrun. 
-        drivetrain.turn_for(RIGHT, 95, DEGREES)#; // Turns right 90º to face the Pharmacy.
-        drivetrain.drive_for(FORWARD, .4 * 1000, MM)#; // Drives into the Pharmacy.
+        drivetrain.turn_for(RIGHT, 100, DEGREES)#; // Turns right 90º to face the Pharmacy.
+        drivetrain.drive_for(FORWARD, 500, MM)#; // Drives into the Pharmacy.
         wait(5, SECONDS)#; // Waits 5 seconds to pick up the medication. 
-        drivetrain.drive_for(REVERSE, 475, MM)#; // Reverses out of the Pharmacy. 
+        drivetrain.drive_for(REVERSE, 550, MM)#; // Reverses out of the Pharmacy. 
         # exit(129)
         wait(.5, SECONDS)#;
         drivetrain.turn_for(RIGHT, 100, DEGREES)#; // Drives up the hallway and stops in front of the Room 1. 
-        drivetrain.drive_for(FORWARD, .5 * 1000, MM)#; // Enters Room 1. 
+        drivetrain.drive_for(FORWARD, 500 , MM)#; // Enters Room 1. 
         drivetrain.turn_for(LEFT, 100, DEGREES)#; // What the fuck
         drivetrain.drive_for(FORWARD,500, MM)#; // Enters Room 1.
         wait(3, SECONDS)#; // Waits 3 seconds to deliver medicine. 
